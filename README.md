@@ -127,6 +127,24 @@ touch depot_with_apriltag.sdf
 
 ```
 ```bash
+cd
+
+git clone --branch harmonic https://github.com/rickarmstrong/gazebo_apriltag.git
+
+sudo apt update
+sudo apt install ros-jazzy-navigation2
+sudo apt install ros-jazzy-nav2-bringup
+sudo apt install ros-jazzy-nav2-minimal-tb*
+sudo apt install ros-jazzy-image-proc
+sudo apt install ros-jazzy-apriltag-ros
+sudo apt install ros-jazzy-opennav-docking
+
+```
+
+And add this to .bashrc:-
+```bash
+export GZ_SIM_RESOURCE_PATH=$GZ_SIM_RESOURCE_PATH:/root/gazebo_apriltag/
+
 cd ~/turtlebot4_ws/src/tb4_apriltag_bringup_cpp/config
 
 touch apriltag_params.yaml
